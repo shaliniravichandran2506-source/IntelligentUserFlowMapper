@@ -146,11 +146,12 @@ class IntelligentUserFlowMapper:
 # -------------------------
 if __name__ == "__main__":
 
-    start_url = "https://webscraper.io/"
+    start_url = input("Enter the start URL: ")#"https://webscraper.io/"
     max_depth = 2
 
     mapper = IntelligentUserFlowMapper(start_url, max_depth)
     result = mapper.run()
 
     print("\nFinal User Flow JSON:")
+
     print(json.dumps(result, indent=4))
